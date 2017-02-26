@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SO_19172176" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdH-2C-WpD">
+                                <rect key="frame" x="74" y="242.5" width="227" height="30"/>
+                                <state key="normal" title="Put &quot;Something&quot; in UIPasteboard"/>
+                                <connections>
+                                    <action selector="putAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tz1-9d-cjv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-FP-toJ">
+                                <rect key="frame" x="140.5" y="280.5" width="94" height="30"/>
+                                <state key="normal" title="Clear using &quot;&quot;"/>
+                                <connections>
+                                    <action selector="clearUsingQuotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yxz-VY-7rM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9y-E5-fdf">
+                                <rect key="frame" x="102" y="356.5" width="170" height="30"/>
+                                <state key="normal" title="Delete entire Pasteboard"/>
+                                <connections>
+                                    <action selector="deleteEntirePasteboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QgL-ry-H1U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srx-rV-hEa">
+                                <rect key="frame" x="93" y="318.5" width="188" height="30"/>
+                                <state key="normal" title="Clear using removeObject()"/>
+                                <connections>
+                                    <action selector="clearUsingRemove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h91-r1-Fh8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPV-XO-MeC">
+                                <rect key="frame" x="16" y="629" width="60" height="30"/>
+                                <state key="normal" title="Log data"/>
+                                <connections>
+                                    <action selector="logPasteboardType:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rbW-Pf-fzh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lae-BJ-IkV">
+                                <rect key="frame" x="274" y="629" width="85" height="30"/>
+                                <state key="normal" title="Log Content"/>
+                                <connections>
+                                    <action selector="logAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6tD-zO-AAv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lae-BJ-IkV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5oa-27-Xi6"/>
+                            <constraint firstItem="srx-rV-hEa" firstAttribute="top" secondItem="N6M-FP-toJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Y80-KM-CX9"/>
+                            <constraint firstAttribute="centerX" secondItem="H9y-E5-fdf" secondAttribute="centerX" constant="0.5" id="dSo-se-Wgq"/>
+                            <constraint firstAttribute="centerY" secondItem="srx-rV-hEa" secondAttribute="centerY" id="eBS-hs-RWT"/>
+                            <constraint firstItem="wPV-XO-MeC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eUH-H1-iCd"/>
+                            <constraint firstAttribute="centerX" secondItem="NdH-2C-WpD" secondAttribute="centerX" id="hY3-gw-ZiT"/>
+                            <constraint firstItem="H9y-E5-fdf" firstAttribute="top" secondItem="srx-rV-hEa" secondAttribute="bottom" constant="8" symbolic="YES" id="lp3-cC-m4N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wPV-XO-MeC" secondAttribute="bottom" constant="8" symbolic="YES" id="pPX-sq-I4b"/>
+                            <constraint firstAttribute="centerX" secondItem="N6M-FP-toJ" secondAttribute="centerX" id="qlh-RK-AcP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lae-BJ-IkV" secondAttribute="bottom" constant="8" symbolic="YES" id="rN5-6i-rfE"/>
+                            <constraint firstAttribute="centerX" secondItem="srx-rV-hEa" secondAttribute="centerX" constant="0.5" id="tMj-cH-6Lc"/>
+                            <constraint firstItem="N6M-FP-toJ" firstAttribute="top" secondItem="NdH-2C-WpD" secondAttribute="bottom" constant="8" symbolic="YES" id="vCf-Lj-eq4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.5" y="147.5"/>
+        </scene>
+    </scenes>
+</document>
